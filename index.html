@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player : Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left-sec">
+            <div class="home">
+                <img src="https://newsroom.spotify.com/wp-content/themes/ftr/assets/images/spotify-logo.png" width="133"
+                    height="37" alt="Spotify">
+                <ul>
+                    <li>
+                        <img src="Media/home.svg" alt="home"> Home
+                    </li>
+                    <li>
+                        <img src="Media/search.svg" alt="search"> Search
+                    </li>
+                </ul>
+            </div>
+            <div class="library">
+                <div class="library-head">
+                    <img class="library-logo" src="Media/library.svg" alt="library">
+                    <p>Your Library</p>
+                    <img class="library-logo" src="Media/add.svg" alt="add">
+                </div>
+                <!-- <div class="createPlaylists">
+                    <p>Create your playlist</p>
+                    <p>It's easy! We'll help you</p>
+                    <button>&nbsp;&nbsp;Create playlist&nbsp;&nbsp;</button>
+                </div>
+                <div class="searchPodcasts">
+                    <p>Let's find some podcasts to follow</p>
+                    <p>We'll keep you updated on new episodes</p>
+                    <button>&nbsp;&nbsp;Browse podcasts&nbsp;&nbsp;</button>
+                </div> -->
+                <div class="songsList">
+                    <ol class="cardHolder"></ol>
+                </div>
+                <div class="infobar">
+                    <span>Legal</span>
+                    <span>Safety & Privacy Center</span>
+                    <span>Privacy Policy</span>
+                    <span>Cookies</span>
+                    <br><br>
+                    <span>About Ads</span>
+                    <span>Accessibility</span>
+                    <br><br>
+                    <span>Cookies</span>
+                    <button>
+                        <img src="Media/English.svg" alt="language">
+                        <p>English</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right-sec">
+            <div class="nav">
+                <div>
+                    <img class="previous" src="Media/left.svg" alt="previous">
+                    <img class="next" src="Media/right.svg" alt="next">
+                </div>
+                <div>
+                    <span class="signup">&nbsp;&nbsp;&nbsp;Sign up&nbsp;&nbsp;&nbsp;</span>
+                    <button class="login">&nbsp;&nbsp;&nbsp;Log in&nbsp;&nbsp;&nbsp;</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylists">
+                <h1>Spotify Playlists</h1>
+                <div class="cardContainer">
+                    <div class="card">
+                        <img class="play" src="Media/play.svg" alt="">
+                        <img class="coverImg" src="Media/cardImage.jpg" alt="Felling good Playlist">
+                        <h3>Feelin' Good</h3>
+                        <p>Feeling good with this positive timeless playlist!</p>
+                    </div>
+                    <div class="card">
+                        <img class="play" src="Media/play.svg" alt="">
+                        <img class="coverImg" src="Media/cardImage.jpg" alt="Felling good Playlist">
+                        <h3>Feelin' Good</h3>
+                        <p>Feeling good with this positive timeless playlist!</p>
+                    </div>
+                    <div class="card">
+                        <img class="play" src="Media/play.svg" alt="">
+                        <img class="coverImg" src="Media/cardImage.jpg" alt="Felling good Playlist">
+                        <h3>Feelin' Good</h3>
+                        <p>Feeling good with this positive timeless playlist!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="songPlayer">
+                <div class="aboveBar">
+                    <div class="songInfo"><b>Track Name</b> - <i>Artist</i></div>
+                    <div class="songButtons">
+                        <img src="Media/previous.svg" alt="previous">
+                        <img class="playButton" src="Media/playBarplay.svg" alt="play">
+                        <img class="pauseButton" src="Media/pause.svg" alt="pause">
+                        <img src="Media/next.svg" alt="next">
+                    </div>
+                    <div class="songTime">00:00:00 / 00:00:00</div>    
+                </div>
+                <div class="seekbar">
+                    <div class="proceeder"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

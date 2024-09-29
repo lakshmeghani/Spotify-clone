@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200">
+  <!-- Outer circle to ensure the SVG is circular -->
+  <circle cx="100" cy="100" r="100" fill="#1abc54"/>
+
+  <!-- Original path scaled and centered inside the circle -->
+  <g transform="translate(25, 25) scale(0.15)">
+    <path d="M320,760v-560l440,280l-440,280Zm80-280Zm0,134l210-134l-210-134v268Z" fill="black"/>
+  </g>
+</svg>
