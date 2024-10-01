@@ -13,8 +13,11 @@
     <div class="container flex">
         <div class="left-sec">
             <div class="home">
-                <img src="https://newsroom.spotify.com/wp-content/themes/ftr/assets/images/spotify-logo.png" width="133"
-                    height="37" alt="Spotify">
+                <div class="logo">
+                    <img src="https://newsroom.spotify.com/wp-content/themes/ftr/assets/images/spotify-logo.png"
+                        width="133" height="37" alt="Spotify">
+                    <img class="close" src="Media/close.svg" alt="close">
+                </div>
                 <ul>
                     <li>
                         <img src="Media/home.svg" alt="home"> Home
@@ -62,7 +65,8 @@
         </div>
         <div class="right-sec">
             <div class="nav">
-                <div>
+                <div class="icons">
+                    <img class="popSide" src="Media/hamburger.svg" alt="side menu">
                     <img class="previous" src="Media/left.svg" alt="previous">
                     <img class="next" src="Media/right.svg" alt="next">
                 </div>
@@ -74,19 +78,19 @@
             <div class="spotifyPlaylists">
                 <h1>Spotify Playlists</h1>
                 <div class="cardContainer">
-                    <div class="card">
+                    <div class="card" data-folder="KR$NA">
                         <img class="play" src="Media/play.svg" alt="">
                         <img class="coverImg" src="Media/cardImage.jpg" alt="Felling good Playlist">
                         <h3>Feelin' Good</h3>
                         <p>Feeling good with this positive timeless playlist!</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-folder="RAFTAAR">
                         <img class="play" src="Media/play.svg" alt="">
                         <img class="coverImg" src="Media/cardImage.jpg" alt="Felling good Playlist">
                         <h3>Feelin' Good</h3>
                         <p>Feeling good with this positive timeless playlist!</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-folder="DIVINE">
                         <img class="play" src="Media/play.svg" alt="">
                         <img class="coverImg" src="Media/cardImage.jpg" alt="Felling good Playlist">
                         <h3>Feelin' Good</h3>
@@ -96,18 +100,25 @@
             </div>
             <div class="songPlayer">
                 <div class="aboveBar">
-                    <div class="songInfo"><b>Track Name</b> - <i>Artist</i></div>
+                    <div class="songInfo"><b class="trackName">Track Name</b> - <i class="artistName">Artist</i></div>
                     <div class="songButtons">
-                        <img src="Media/previous.svg" alt="previous">
+                        <img class="previousButton" src="Media/previous.svg" alt="previous">
                         <img class="playButton" src="Media/playBarplay.svg" alt="play">
                         <img class="pauseButton" src="Media/pause.svg" alt="pause">
-                        <img src="Media/next.svg" alt="next">
+                        <img class="nextButton" src="Media/next.svg" alt="next">
                     </div>
-                    <div class="songTime">00:00:00 / 00:00:00</div>    
+                    <div class="timeVolume">
+                        <div class="songTime">00:00:00 / 00:00:00</div>
+                        <div class="volume">
+                            <img class="volumeControl" src="Media/volume.svg" alt="volume">
+                            <input class="volumeChanger" type="range" name="volume">
+                        </div>
+                    </div>
                 </div>
                 <div class="seekbar">
                     <div class="proceeder"></div>
                 </div>
+
             </div>
         </div>
     </div>
