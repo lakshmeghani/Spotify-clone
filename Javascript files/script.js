@@ -3,7 +3,7 @@ var songNames = [];
 var artists = [];
 let albums = [];
 let allJsons = [];
-let folder = "KR$NA";
+let folder = "KRSNA";
 let isFirstSong = false;
 
 function formatHoursMinutesSeconds(timeInSeconds) {
@@ -28,7 +28,7 @@ function formatHoursMinutesSeconds(timeInSeconds) {
 }
 
 async function song(folder) {
-    let songsList = await fetch(`http://0.0.0.0:3000/Media/Songs/${folder}/`);
+    let songsList = await fetch(`/Media/Songs/${folder}/`);
     let response = await songsList.text();
     let recdHTML = document.createElement("div");
     recdHTML.innerHTML = response;
@@ -44,7 +44,7 @@ async function song(folder) {
 }
 
 async function displayAlbums() {
-    let albumsList = await fetch(`http://0.0.0.0:3000/Media/Songs/`);
+    let albumsList = await fetch(`/Media/Songs/`);
     let response = await albumsList.text();
     let recdHTML = document.createElement("div");
     recdHTML.innerHTML = response;
@@ -60,7 +60,7 @@ async function displayAlbums() {
             albums.push(albumName);
 
             // Obtaining the matadata of each folder so that we can dynamically create cards!
-            let metadataList = await fetch(`http://0.0.0.0:3000/Media/Songs/${albumName}/info.json`);
+            let metadataList = await fetch(`/Media/Songs/${albumName}/info.json`);
             let response = await metadataList.json();
             cardContainer.innerHTML += `<div class="card" data-folder="${albumName}">
                 <img class="play" src="Media/play.svg" alt="">
@@ -144,7 +144,7 @@ async function getSongs(folder) {
     playSong(songNames[0], artists[0], false, folder);
 
     //Checking whether a card is clicked so as to play the first song of that card or folder!
-    if(isFirstSong) {
+    if (isFirstSong) {
         playSong(songNames[0], artists[0], true, folder);
     }
 };
@@ -273,6 +273,10 @@ nextButton.addEventListener("click", () => {
 //Volume changing
 document.getElementsByTagName("input")[0].addEventListener("change", (e) => {
     clickedSong.volume = (e.target.value / 100);
+    if (clickedSong.volume > 0) {
+        document.querySelector(".volumeControl").hidden = false;
+        document.querySelector(".muteVol").hidden = true;
+    }
 });
 
 document.querySelector(".volumeControl").addEventListener("click", () => {

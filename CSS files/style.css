@@ -499,4 +499,9 @@ body {
     .timeVolume {
         width: 100%;
     }
+
+    .seekbar {
+        width: 90%;
+        margin-left: 5%;
+    }
 }
